@@ -17,7 +17,10 @@ class VoitureFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'marque' => $this->faker->company(),
+            'modele' => $this->faker->companySuffix(),
+            'couleur' => $this->faker->colorName(),
+            'photo' => $this->faker->imageUrl(640, 480, 'cars', true)
         ];
     }
 }
